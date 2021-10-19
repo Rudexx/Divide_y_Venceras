@@ -12,6 +12,8 @@ public class Controller {
     private Torneo torneo;
     private Multiplicacion_matriz matriz;
 
+	/** Constructor de la clase
+	 */
 
     public  Controller() {
         view = new View();
@@ -19,6 +21,11 @@ public class Controller {
         matriz = new Multiplicacion_matriz();
         run();
     }
+
+	/** Funcion que inicia el funcionamiento del programa
+	 */
+
+
     public void run(){
     	view.mostrarInformacion("Bienvenido Al programa de algoritmos de divide y Venceras");
     	int opcion = view.mostrarOpcion("Seleccione el algoritmo que desea utilizar",
@@ -88,6 +95,10 @@ public class Controller {
     		}
     	}
     }
+	/** Funcion que imprime una matriz especifica
+	 *      @param matriz la matriz para imprimir
+	 *      @return un mensaje con la informacion de la matriz
+	 */
     
     public String imprimirMatriz(int[][] matriz) {
     	String resultado = "";
@@ -99,6 +110,12 @@ public class Controller {
 		}
     	return resultado;
     }
+
+	/** Funcion que permite llenar una matriz de forma automática o manual
+	 *      @param n tamano de la matriz
+	 *      @param opcion define si se va a llenar manual o automaticamente
+	 *      @return devuelve la matriz resultante
+	 */
     
     public int[][] llenarMatriz(int n, int opcion){
     	int[][] matriz = new int[n][n];
@@ -123,7 +140,12 @@ public class Controller {
     		}
     	}
     	return matriz;
-    }    
+    }
+
+	/** Funcion que permite verifica si un numero es potencia de 2
+	 *      @param n El numero que se quiere verificar
+	 *      @return true: si es potencia de 2, false: si no es potencia de 2
+	 */
     
     public static boolean isPowerOfTwo(int n)
     {

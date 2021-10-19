@@ -1,7 +1,11 @@
 package co.edu.unbosque.model;
 
 public class Multiplicacion_matriz {
-	
+    /** Funcion que permite multiplicar dos matrices mediante el metodo regular
+     *      @param A la primera matriz a multiplicar
+     *      @param B la segunda matriz a multiplicar
+     *      @return devuelve la matriz resultante de la multiplicacion
+     */
 	public int[][] regular(int[][] A, int[][] B){
 		 //Lugar en donde se almacena el resultado
         int[][] producto = new int[B.length][B[0].length];
@@ -24,7 +28,12 @@ public class Multiplicacion_matriz {
 	}
 	
 
-	 /** Function to multiply matrices **/
+
+    /** Funcion para multiplicar matrices por el metodo strassen
+     *      @param A la primera matriz a multiplicar
+     *      @param B la segunda matriz a multiplicar
+     *      @return devuelve la matriz resultante de la multiplicacion
+     */
     public int[][] strassen(int[][] A, int[][] B)
     {        
         int n = A.length;
@@ -92,7 +101,12 @@ public class Multiplicacion_matriz {
         /** return result **/    
         return R;
     }
-    /** Funtion to sub two matrices **/
+
+    /** Función para sumar dos matrices
+     *      @param A la primera matriz a sumar
+     *      @param B la segunda matriz a sumar
+     *      @return devuelve la matriz resultante de la suma
+     */
     public int[][] sub(int[][] A, int[][] B)
     {
         int n = A.length;
@@ -102,7 +116,13 @@ public class Multiplicacion_matriz {
                 C[i][j] = A[i][j] - B[i][j];
         return C;
     }
-    /** Funtion to add two matrices **/
+
+
+    /** Función para anadir dos matrices
+     *      @param A la primera matriz a anadir
+     *      @param B la segunda matriz a anadir
+     *      @return devuelve la matriz resultante
+     */
     public int[][] add(int[][] A, int[][] B)
     {
         int n = A.length;
@@ -112,14 +132,30 @@ public class Multiplicacion_matriz {
                 C[i][j] = A[i][j] + B[i][j];
         return C;
     }
-    /** Funtion to split parent matrix into child matrices **/
+
+
+
+    /** Función para dividir matriz padre en submatrices hijas
+     *      @param P la primera matriz a dividir
+     *      @param C la segunda matriz a dividir
+     *      @param iB indice 1
+     *      @param jB indice 2
+     */
     public void split(int[][] P, int[][] C, int iB, int jB) 
     {
         for(int i1 = 0, i2 = iB; i1 < C.length; i1++, i2++)
             for(int j1 = 0, j2 = jB; j1 < C.length; j1++, j2++)
                 C[i1][j1] = P[i2][j2];
     }
-    /** Funtion to join child matrices intp parent matrix **/
+
+
+
+    /** Función para juntar matrices hijas en una matriz padre
+     *      @param C la primera matriz a anadir
+     *      @param P la segunda matriz a anadir
+     *      @param iB indice 1
+     *      @param jB indice 2
+     */
     public void join(int[][] C, int[][] P, int iB, int jB) 
     {
         for(int i1 = 0, i2 = iB; i1 < C.length; i1++, i2++)

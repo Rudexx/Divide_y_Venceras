@@ -8,9 +8,9 @@ public class Torneo {
 
 	
 
- /** Función que permite verificar si un valor n es potencia de 2
-  *      @param n es el valor que recibe la función para verificar si es múltiplo de 2 o no
-  *      @return devuelve TRUE = 1 si el valor recibido es múltiplo de 2 o FALSE = 0 si no lo es
+ /** Funcion que permite verificar si un valor n es potencia de 2
+  *      @param n es el valor que recibe la funciï¿½n para verificar si es mï¿½ltiplo de 2 o no
+  *      @return devuelve TRUE = 1 si el valor recibido es mï¿½ltiplo de 2 o FALSE = 0 si no lo es
   */
  public  Boolean potenciaDos (int n)
  {
@@ -23,7 +23,7 @@ public class Torneo {
  	return false;
  }
 
- /** Función que llena la tabla de encuentros entre jugadores
+ /** Funcion que llena la tabla de encuentros entre jugadores
   *      @param n - Es la cantidad de jugadores
   */
  public void torneo (int n)
@@ -61,7 +61,7 @@ public class Torneo {
  			}
  		}
  	}
- 	/** Si no es múltiplo de 2 pero el número de jugadores es par como el 6, 10, 12, 14, etc. */
+ 	/** Si no es multiplo de 2 pero el nï¿½mero de jugadores es par como el 6, 10, 12, 14, etc. */
  	else if (n%2 == 0) {
  		/* Dividimos hasta llegar al caso base */
  		torneo (n/2);
@@ -103,12 +103,12 @@ public class Torneo {
  			}
  		}
  	}
- 	/** Si el número de jugadores es IMPAR */
+ 	/** Si el numero de jugadores es IMPAR */
  	else {
  		/* Si n es impar, le sumamos 1 y lo volvemos par, para que en la llamada recursiva lleguemos nuevamente al caso base */
  		torneo (n+1);
- 		/* Eliminamos los valroes excedentes creados por llamar a la función con n+1
-                  * estos valores excedentes son los días de descanso cuando la cantidad de jugadores es impar
+ 		/* Eliminamos los valroes excedentes creados por llamar a la funciï¿½n con n+1
+                  * estos valores excedentes son los dï¿½as de descanso cuando la cantidad de jugadores es impar
                   */
  		for (jugador=0; jugador<n; jugador++) {
  			for (dia=0; dia<n; dia++) {
@@ -120,7 +120,7 @@ public class Torneo {
  }
  
 
-/* Función ImprimirTabla - Da formato a la impresión de la tabla de encuentros
+/* Funcion ImprimirTabla - Da formato a la impresion de la tabla de encuentros
  *      @param n - es la cantidad de jugadores
  */
 public String imprimirTabla(int n)
@@ -128,7 +128,7 @@ public String imprimirTabla(int n)
 	int dias, i, j;
 	String resultado = "";
 
-	/* Si n es par la cantidad de dias es n-1, si es impar la cantidad de dias es n y hay día de descanso para los jugadores*/
+	/* Si n es par la cantidad de dias es n-1, si es impar la cantidad de dias es n y hay dï¿½a de descanso para los jugadores*/
 	if(n%2 == 0)
 		dias = n-1;
 	else

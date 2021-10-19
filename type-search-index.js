@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"co.edu.unbosque.controller","l":"AplMain"},{"p":"co.edu.unbosque.controller","l":"Controller"},{"p":"co.edu.unbosque.model","l":"Multiplicacion_matriz"},{"p":"co.edu.unbosque.model","l":"Torneo"},{"p":"co.edu.unbosque.view","l":"View"}];updateSearchResults();
