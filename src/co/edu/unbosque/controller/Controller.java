@@ -50,13 +50,13 @@ public class Controller {
 			view.mostrarInformacion("Debe ingresar un numero no mayor a 50 y mayor a 1");
 			run();
 		}
-    	}else {
-    		opcion = view.mostrarOpcion("Â¿Desea llenar la matriz manual o automaticamente?",
+    	}else if(opcion == 1) {
+    		opcion = view.mostrarOpcion("¿Desea llenar la matriz manual o automaticamente?",
     				"Automatico" , "Manual");
-    		int opcion2 = view.mostrarOpcion("Â¿Que algoritmo desea usar?",
+    		int opcion2 = view.mostrarOpcion("¿Que algoritmo desea usar?",
     				"Divide y venceras (Stressen)" , "Generico");
     		try {
-    			int n = Integer.parseInt(view.ingresarInformacion("Ingrese el tamano de la matriz (Debe ser par para el algoritmo de Strassen)"));
+    			int n = Integer.parseInt(view.ingresarInformacion("Ingrese el tamano de la matriz (Debe ser potencia de 2 para el algoritmo de Strassen)"));
     			if(opcion2 == 0 && !isPowerOfTwo(n)) {
     				while(!isPowerOfTwo(n)) {
     					n = Integer.parseInt
@@ -93,6 +93,8 @@ public class Controller {
     			view.mostrarInformacion("Error: Ingrese un numero valido y mayor a 0");
 				run();
     		}
+    	}else {
+    		
     	}
     }
 	/** Funcion que imprime una matriz especifica
