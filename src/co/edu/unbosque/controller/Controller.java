@@ -61,7 +61,7 @@ public class Controller {
     				while(!isPowerOfTwo(n)) {
     					n = Integer.parseInt
     							(view.ingresarInformacion
-    									("Error: el tamaÃ±o de la matriz debe ser potencia de 2; " 
+    									("Error: el tamaño de la matriz debe ser potencia de 2; " 
     											+ "\nIngrese el tamano de la matriz"));
     				}
     			}
